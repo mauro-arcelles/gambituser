@@ -19,7 +19,7 @@ func SignUp(sign models.SignUp) error {
 	defer Db.Close()
 
 	query := fmt.Sprintf(`
-    INSERT INTO users (User_Email, User_UUID, User_DateAdd) VALUES ('%v' , '%v', '%v')`,
+    INSERT INTO users (User_Email, User_UUID, User_DateAdd) VALUES ('%v','%v','%v')`,
 		sign.UserEmail,
 		sign.UserUUID,
 		tools.FechaMySQL(),
